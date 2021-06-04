@@ -10,4 +10,4 @@
   sudo docker build
   ```
 # Example:
-  <img src="https://i.imgur.com/poJlQUV.png">
+  <img src="https://i.imgur.com/5EzeHSo.png">
