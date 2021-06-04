@@ -1,0 +1,26 @@
+version: '3'
+services:
+
+  api:
+    image: newsapi
+    container_name: frontend
+    build: 
+      context: ./api
+    ports:
+      - 3007:80
+      
+  frontend:
+    image: root
+    container_name: api
+    build:
+      context: ./frontend
+    ports:
+      - 3008:80
+
+  proxy:
+    image: nginx
+    container_name: proxy
+    volumes: 
+      - ./rproxy/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 81:80
